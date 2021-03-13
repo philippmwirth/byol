@@ -12,7 +12,7 @@ from byol import BYOL
 from utils import knn_predict, BenchmarkModule
 
 num_workers = 8
-max_epochs = 200
+max_epochs = 800
 knn_k = 200
 knn_t = 0.1
 classes = 10
@@ -130,7 +130,7 @@ class BYOLModule(BenchmarkModule):
         lr = 2e-2 * batch_size / 256 # linear scaling of lr
         optim = torch.optim.SGD(self.resnet_byol.parameters(), lr=lr,
                                 momentum=0.9, weight_decay=5e-4)
-        scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optim, max_epochs)
+        scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optim, 800)
         return [optim], [scheduler]
 
 

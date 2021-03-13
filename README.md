@@ -26,14 +26,14 @@ pip install -r requirements.txt
 - lightly
 
 ### Benchmarks
-We benchmark the BYOL model on the CIFAR-10 dataset following the KNN evaluation protocol.¨
+We benchmark the BYOL model on the CIFAR-10 dataset following the KNN evaluation protocol.
 
 
 Epochs | Batch Size | warmup | Test Accuracy | Peak GPU Usage
 ------:|---------:|------:|-------:|---------------:
-200 | 512 | &#x2612; | 0.79 | 9.3GBytes
+200 | 512 | | 0.85 | 9.3GBytes
 200 | 512 |&#x2611; | TODO | 9.3GBytes
-800 | 512 | &#x2612; | TODO | 9.3GBytes
+800 | 512 |  | TODO | 9.3GBytes
 
 Accuracy             |  Loss 
 :-------------------------:|:-------------------------:
