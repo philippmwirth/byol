@@ -9,8 +9,8 @@ This is currently a work in progress. The code is a modified version of SimSiam 
 
 **Todo:**
 
-- [ ] warmup learning rate from 0
-- [ ] report results on cifar-10
+- [X] warmup learning rate from 0
+- [X] report results on cifar-10
 - [ ] create PR to add to lightly
 
 ### Installation
@@ -33,7 +33,7 @@ Epochs | Batch Size | warmup | Test Accuracy | Peak GPU Usage
 ------:|---------:|------:|-------:|---------------:
 200 | 512 | | 0.85 | 9.3GBytes
 200 | 512 |&#x2611; | TODO | 9.3GBytes
-800 | 512 |  | TODO | 9.3GBytes
+800 | 512 |  | 0.91 | 9.3GBytes
 
 Accuracy             |  Loss 
 :-------------------------:|:-------------------------:

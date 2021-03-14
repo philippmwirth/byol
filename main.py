@@ -12,7 +12,7 @@ from byol import BYOL
 from utils import knn_predict, BenchmarkModule
 
 num_workers = 8
-max_epochs = 800
+max_epochs = 200
 knn_k = 200
 knn_t = 0.1
 classes = 10
@@ -121,6 +121,12 @@ class BYOLModule(BenchmarkModule):
                         on_tpu=None,
                         using_native_amp=None,
                         using_lbfgs=None):        
+
+        # learning rate warmup
+        if self.trainer.global_step < 1000:
+            lr_scale = min(1., float(self.trainer.global_step + 1) / 1000.)
+            for pg in optimizer.param_groups:
+                pg['lr'] = lr_scale * 2e-2 * batch_size / 256
 
         # update params
         optimizer.step()
