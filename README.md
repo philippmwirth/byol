@@ -32,7 +32,7 @@ We benchmark the BYOL model on the CIFAR-10 dataset following the KNN evaluation
 Epochs | Batch Size | warmup | Test Accuracy | Peak GPU Usage
 ------:|---------:|------:|-------:|---------------:
 200 | 512 | | 0.85 | 9.3GBytes
-200 | 512 |&#x2611; | TODO | 9.3GBytes
+200 | 512 |&#x2611; | 0.86 | 9.3GBytes
 800 | 512 |  | 0.91 | 9.3GBytes
 
 Accuracy             |  Loss 
